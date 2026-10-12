@@ -2952,7 +2952,7 @@ def _main_annotate():
     elif args.previous_csv:
         output_path = Path(args.previous_csv)
     else:
-        output_path = Path(DEFAULT_OUTPUT)
+        output_path = tomo_dir / DEFAULT_OUTPUT
     txt_path = output_path.with_suffix(".txt")
     # Only when no --previous_csv was given: that flag already said which
     # file to continue, and loading the output on top of it would mix two
